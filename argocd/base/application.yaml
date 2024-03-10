@@ -5,7 +5,7 @@ metadata:
   name: argocd
   namespace: argocd
 spec:
-  project: management
+  project: default
   source:
     path: argocd
     repoURL: https://github.com/lengors/lengy.git
