@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-system
+  namespace: istio-system
+spec:
+  project: default
+  source:
+    path: istio-system
+    repoURL: https://github.com/lengors/lengy.git
+    targetRevision: main
+  destination:
+    namespace: istio-system
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
