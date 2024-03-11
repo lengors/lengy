@@ -1,19 +1,19 @@
-# ---
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: argocd
-#   namespace: argocd
-# spec:
-#   project: default
-#   source:
-#     path: argocd
-#     repoURL: https://github.com/lengors/lengy.git
-#     targetRevision: main
-#   destination:
-#     namespace: argocd
-#     server: https://kubernetes.default.svc
-#   syncPolicy:
-#     automated:
-#       selfHeal: true
-#       prune: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: argocd
+    repoURL: https://github.com/lengors/lengy.git
+    targetRevision: main
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
