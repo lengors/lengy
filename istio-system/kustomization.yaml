@@ -6,5 +6,5 @@ namespace: istio-system
 
 resources:
   - base/namespace.yaml
-  # - base/application.yaml
+  - base/application.yaml
   - base/deployment.yaml
