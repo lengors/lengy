@@ -10,4 +10,4 @@ secretGenerator:
       - secret/.env
 resources:
   - "../../base"
-  - "application.yaml"
+  - application.yaml
