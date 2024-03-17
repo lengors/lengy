@@ -7,7 +7,7 @@ metadata:
 spec:
   project: default
   source:
-    path: argocd
+    path: argocd/overlays/production
     repoURL: https://github.com/lengors/lengy.git
     targetRevision: main
   destination:
