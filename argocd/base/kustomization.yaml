@@ -5,5 +5,5 @@ metadata:
   name: argocd
 namespace: argocd
 resources:
-  - "../namespace.yaml"
+  - namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.2/manifests/install.yaml

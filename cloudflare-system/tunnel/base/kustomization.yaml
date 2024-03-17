@@ -5,5 +5,5 @@ metadata:
   name: tunnel
 namespace: cloudflare-system
 resources:
-  - "../.."
+  - "../../base"
   - deployment.yaml
