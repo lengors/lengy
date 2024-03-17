@@ -6,12 +6,6 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  ignoreDifferences:
-    - kind: Kustomization
-      name: tunnel
-      namespace: argocd
-      jsonPointers:
-        - /secretGenerator
   source:
     path: cloudflare/tunnel/overlays/production
     repoURL: https://github.com/lengors/lengy.git

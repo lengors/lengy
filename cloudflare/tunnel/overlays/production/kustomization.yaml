@@ -4,10 +4,6 @@ kind: Kustomization
 metadata:
   name: tunnel
 namespace: cloudflare
-secretGenerator:
-  - name: tunnel
-    envs:
-      - secret/.env
 resources:
   - "../../base"
   - application.yaml
