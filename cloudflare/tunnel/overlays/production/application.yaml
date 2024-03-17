@@ -7,11 +7,11 @@ metadata:
 spec:
   project: default
   source:
-    path: cloudflare-system/tunnel/overlays/production
+    path: cloudflare/tunnel/overlays/production
     repoURL: https://github.com/lengors/lengy.git
     targetRevision: main
   destination:
-    namespace: cloudflare-system
+    namespace: cloudflare
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
