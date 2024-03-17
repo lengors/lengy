@@ -7,15 +7,15 @@ metadata:
 spec:
   project: default
   ignoreDifferences:
-    - kind: Secret
+    - kind: Kustomization
       name: tunnel
-      namespace: cloudflare
+      namespace: argocd
+      jsonPointers:
+        - /secretGenerator
   source:
     path: cloudflare/tunnel/overlays/production
     repoURL: https://github.com/lengors/lengy.git
     targetRevision: main
-    directory:
-      exclude: "secret"
   destination:
     namespace: cloudflare
     server: https://kubernetes.default.svc
