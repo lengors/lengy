@@ -5,3 +5,4 @@ metadata:
   name: argocd-kustomization
 resources:
   - "../../base"
+  - "application.yaml"
