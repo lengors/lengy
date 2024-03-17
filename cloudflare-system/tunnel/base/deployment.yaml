@@ -23,6 +23,7 @@ spec:
           - tunnel
           - --no-autoupdate
           - run
+          - --lengy
         envFrom:
           - secretRef:
               name: tunnel
