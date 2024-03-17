@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tunnel
+  namespace: cloudflare-system
+  labels:
+    app: tunnel
+spec:
+  selector:
+    matchLabels:
+      app: tunnel
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: tunnel
+    spec:
+      containers:
+      - name: tunnel
+        image: cloudflare/cloudflared:2024.2.1
+        args:
+          - tunnel
+          - --no-autoupdate
+          - run
+        envFrom:
+          - secretRef:
+              name: tunnel
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: "0.2"
