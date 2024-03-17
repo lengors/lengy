@@ -1,0 +1,47 @@
+---
+certResolvers:
+  cloudflare:
+    email: pedro.cavadas.1998@outlook.com
+    dnsChallenge:
+      provider: cloudflare
+      resolvers:
+        - 1.1.1.1
+        - 8.8.8.8
+    storage: /data/acme.json
+
+logs:
+  general:
+    level: ERROR
+
+ports:
+  web:
+    redirectTo:
+      port: websecure
+  websecure:
+    tls:
+      enabled: true
+      certResolver: cloudflare
+
+env:
+  - name: CF_DNS_API_TOKEN
+    valueFrom:
+      secretKeyRef:
+        key: apiToken
+        name: traefik-secret
+
+# TODO
+ingressRoute:
+  dashboard:
+    enabled: false
+
+# TODO
+persistence:
+  enabled: true
+  name: data
+  size: 128Mi
+  path: /data
+  accessMode: ReadWriteMany
+
+ingressClass:
+  enabled: true
+  isDefaultClass: true

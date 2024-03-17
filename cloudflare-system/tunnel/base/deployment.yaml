@@ -23,7 +23,8 @@ spec:
           - tunnel
           - --no-autoupdate
           - run
-          - $(TUNNEL_NAME)
+          - --token
+          - $(TUNNEL_SECRET)
         envFrom:
           - secretRef:
               name: tunnel
