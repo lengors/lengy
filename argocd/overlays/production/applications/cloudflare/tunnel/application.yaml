@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tunnel
+  name: cloudflare.tunnel
   namespace: argocd
 spec:
   project: default

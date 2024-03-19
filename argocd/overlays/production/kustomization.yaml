@@ -5,4 +5,6 @@ metadata:
   name: argocd
 resources:
   - "../../base"
-  - "application.yaml"
+  - "applications/argocd/application.yaml"
+  - "applications/cloudflare/tunnel/application.yaml"
+  - "applications/vault/secrets-operator/application.yaml"
