@@ -4,12 +4,12 @@ kind: Kustomization
 metadata:
   name: argocd
 namespace: argocd
-resources:
-  - namespace.yaml
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.2/manifests/install.yaml
 patches:
-  - path: config-map.yaml
+  - path: argocd-cm.yaml
     target:
       kind: ConfigMap
       name: argocd-cm
       version: v1
+resources:
+  - namespace.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.2/manifests/install.yaml
