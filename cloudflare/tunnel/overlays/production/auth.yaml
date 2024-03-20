@@ -1,0 +1,11 @@
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: HCPAuth
+metadata:
+  name: tunnel
+  namespace: cloudflare
+spec:
+  organizationID: 8bac47cf-c2a3-4855-985c-3f7473b013af
+  projectID: 2af6668d-5e87-45b5-b0a9-8625f234a3ef
+  servicePrincipal:
+    secretRef: vault

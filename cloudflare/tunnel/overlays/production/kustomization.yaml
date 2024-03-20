@@ -6,3 +6,5 @@ metadata:
 namespace: cloudflare
 resources:
   - "../../base"
+  - "auth.yaml"
+  - "secret.yaml"
