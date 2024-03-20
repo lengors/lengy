@@ -25,9 +25,12 @@ spec:
           - run
           - --token
           - $(TUNNEL_SECRET)
-        envFrom:
-          - secretRef:
-              name: tunnel
+        env:
+          - name: TUNNEL_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: tunnel
+                key: tunnelSecret
         resources:
           limits:
             memory: 128Mi
