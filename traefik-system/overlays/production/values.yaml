@@ -1,4 +1,7 @@
 ---
+deployment:
+  replicas: 3
+
 certResolvers:
   cloudflare:
     email: pedro.cavadas.1998@outlook.com
@@ -26,8 +29,8 @@ env:
   - name: CF_DNS_API_TOKEN
     valueFrom:
       secretKeyRef:
-        key: apiToken
-        name: traefik-secret
+        key: cloudflareApiToken 
+        name: traefik-system
 
 # TODO
 ingressRoute:

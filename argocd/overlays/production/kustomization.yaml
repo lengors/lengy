@@ -6,5 +6,5 @@ metadata:
 resources:
   - "../../base"
   - "applications/argocd/application.yaml"
-  # - "applications/cloudflare/tunnel/application.yaml"
+  - "applications/traefik-system/application.yaml"
   - "applications/vault/secrets-operator/application.yaml"
