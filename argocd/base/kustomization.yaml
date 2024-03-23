@@ -12,4 +12,4 @@ patches:
       version: v1
 resources:
   - namespace.yaml
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.2/manifests/ha/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.2/manifests/install.yaml
