@@ -17,21 +17,21 @@ spec:
         app: tunnel
     spec:
       containers:
-      - name: tunnel
-        image: cloudflare/cloudflared:2024.2.1
-        args:
-          - tunnel
-          - --no-autoupdate
-          - run
-          - --token
-          - $(TUNNEL_SECRET)
-        env:
-          - name: TUNNEL_SECRET
-            valueFrom:
-              secretKeyRef:
-                name: tunnel
-                key: tunnelSecret
-        resources:
-          limits:
-            memory: 128Mi
-            cpu: "0.2"
+        - name: tunnel
+          image: cloudflare/cloudflared:2024.2.1
+          args:
+            - tunnel
+            - --no-autoupdate
+            - run
+            - --token
+            - $(TUNNEL_SECRET)
+          env:
+            - name: TUNNEL_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: tunnel
+                  key: tunnelSecret
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: "0.2"

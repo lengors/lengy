@@ -29,7 +29,7 @@ env:
   - name: CF_DNS_API_TOKEN
     valueFrom:
       secretKeyRef:
-        key: cloudflareApiToken 
+        key: cloudflareApiToken
         name: traefik-system
 
 # TODO
